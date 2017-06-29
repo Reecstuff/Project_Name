@@ -46,16 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainView.Designer.cs">
+      <DependentUpon>FormMainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewElements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewElements.Designer.cs">
+      <DependentUpon>FormNewElements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewTable.Designer.cs">
+      <DependentUpon>FormNewTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainView.resx">
+      <DependentUpon>FormMainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewElements.resx">
+      <DependentUpon>FormNewElements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewTable.resx">
+      <DependentUpon>FormNewTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

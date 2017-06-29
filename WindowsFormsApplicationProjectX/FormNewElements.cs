@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplicationProjectX
 {
-    public partial class Form1 : Form
+    public partial class FormNewElements : Form
     {
-        public Form1()
+        FormMain m;
+        public FormNewElements(FormMain f)
         {
             InitializeComponent();
+            m = f;
         }
     }
 }

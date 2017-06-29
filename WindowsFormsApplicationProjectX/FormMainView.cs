@@ -21,7 +21,7 @@ namespace WindowsFormsApplicationProjectX
 
         private void labelNewTable_Click(object sender, EventArgs e)
         {
-            m.mdiShow(this);
+            m.newTable();
         }
     }
 }

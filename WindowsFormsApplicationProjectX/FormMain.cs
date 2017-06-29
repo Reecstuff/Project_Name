@@ -36,31 +36,23 @@ namespace WindowsFormsApplicationProjectX
             m.Show();
         }
 
-        //public void newTable()
-        //{
-        //    ActiveMdiChild.Hide();
-        //    nt.Show();
-        //}
+        public void newTable()
+        {
+            ActiveMdiChild.Hide();
+            nt.Show();
+        }
+
+        public void mainView()
+        {
+            ActiveMdiChild.Hide();
+            m.Show();
+        }
 
         public void newElements()
         {
-
-        }
-
-        public void back()
-        {
-
-        }
-        public void mdiShow(Form f)
-        {
-            getMdiChild(f).Show();
-        }
-
-
-        private Form getMdiChild(Form f)
-        {
             ActiveMdiChild.Hide();
-            return f;
+            ne.Show();
         }
+
     }
 }

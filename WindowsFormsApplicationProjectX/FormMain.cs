@@ -20,7 +20,7 @@ namespace WindowsFormsApplicationProjectX
         {
             //Initializierung
             InitializeComponent();
-
+            
             m = new FormMainView(this);
             nt = new FormNewTable(this);
             ne = new FormNewElements(this);
@@ -32,8 +32,9 @@ namespace WindowsFormsApplicationProjectX
             m.Dock = DockStyle.Fill;
             nt.Dock = DockStyle.Fill;
             ne.Dock = DockStyle.Fill;
-
+            
             m.Show();
+            
         }
 
         public void newTable()

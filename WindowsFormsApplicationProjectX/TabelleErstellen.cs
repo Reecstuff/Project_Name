@@ -8,96 +8,94 @@ namespace WindowsFormsApplicationProjectX
 {
     class TabelleErstellen
     {
-        String Tabellenname;
-        String Spalte1;
-        String Spalte2;
-        String Spalte3;
-        String Spalte4;
-        String Spalte5;
+        private String tabellenname;
+        private String spalte1 = null;
+        private String spalte2 = null;
+        private String spalte3 = null;
+        private String spalte4 = null;
+        private String spalte5 = null;
+
+        public string Tabellenname
+        {
+            get
+            {
+                return tabellenname;
+            }
+
+            set
+            {
+                tabellenname = value;
+            }
+        }
+
+        public string Spalte1
+        {
+            get
+            {
+                return spalte1;
+            }
+
+            set
+            {
+                spalte1 = value;
+            }
+        }
+
+        public string Spalte2
+        {
+            get
+            {
+                return spalte2;
+            }
+
+            set
+            {
+                spalte2 = value;
+            }
+        }
+
+        public string Spalte3
+        {
+            get
+            {
+                return spalte3;
+            }
+
+            set
+            {
+                spalte3 = value;
+            }
+        }
+
+        public string Spalte4
+        {
+            get
+            {
+                return spalte4;
+            }
+
+            set
+            {
+                spalte4 = value;
+            }
+        }
+
+        public string Spalte5
+        {
+            get
+            {
+                return spalte5;
+            }
+
+            set
+            {
+                spalte5 = value;
+            }
+        }
 
         public TabelleErstellen(String Tabellenname)
         {
             this.Tabellenname = Tabellenname;
         }
-
-        public string Tabellenname1
-        {
-            get
-            {
-                return Tabellenname;
-            }
-
-            set
-            {
-                Tabellenname = value;
-            }
-        }
-
-        public string Spalte11
-        {
-            get
-            {
-                return Spalte1;
-            }
-
-            set
-            {
-                Spalte1 = value;
-            }
-        }
-
-        public string Spalte21
-        {
-            get
-            {
-                return Spalte2;
-            }
-
-            set
-            {
-                Spalte2 = value;
-            }
-        }
-
-        public string Spalte31
-        {
-            get
-            {
-                return Spalte3;
-            }
-
-            set
-            {
-                Spalte3 = value;
-            }
-        }
-
-        public string Spalte41
-        {
-            get
-            {
-                return Spalte4;
-            }
-
-            set
-            {
-                Spalte4 = value;
-            }
-        }
-
-        public string Spalte51
-        {
-            get
-            {
-                return Spalte5;
-            }
-
-            set
-            {
-                Spalte5 = value;
-            }
-        }
-
-
     }
 }

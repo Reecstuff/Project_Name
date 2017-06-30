@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplicationProjectX
 {
-    partial class FormNewElements
+    partial class FormElements
     {
         /// <summary>
         /// Required designer variable.

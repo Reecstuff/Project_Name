@@ -59,11 +59,11 @@
     <Compile Include="FormMainView.Designer.cs">
       <DependentUpon>FormMainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNewElements.cs">
+    <Compile Include="FormElements.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormNewElements.Designer.cs">
-      <DependentUpon>FormNewElements.cs</DependentUpon>
+    <Compile Include="FormElements.Designer.cs">
+      <DependentUpon>FormElements.cs</DependentUpon>
     </Compile>
     <Compile Include="FormNewTable.cs">
       <SubType>Form</SubType>
@@ -80,8 +80,8 @@
     <EmbeddedResource Include="FormMainView.resx">
       <DependentUpon>FormMainView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNewElements.resx">
-      <DependentUpon>FormNewElements.cs</DependentUpon>
+    <EmbeddedResource Include="FormElements.resx">
+      <DependentUpon>FormElements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNewTable.resx">
       <DependentUpon>FormNewTable.cs</DependentUpon>

@@ -15,7 +15,7 @@ namespace WindowsFormsApplicationProjectX
         //WindowsForms anlegen
         FormMainView m;
         FormNewTable nt;
-        FormNewElements ne;
+        FormElements ne;
         public FormMain()
         {
             //Initializierung
@@ -23,7 +23,7 @@ namespace WindowsFormsApplicationProjectX
             
             m = new FormMainView(this);
             nt = new FormNewTable(this);
-            ne = new FormNewElements(this);
+            ne = new FormElements(this);
             //MdiParent zuweisen
             m.MdiParent = this;
             nt.MdiParent = this;
@@ -49,7 +49,7 @@ namespace WindowsFormsApplicationProjectX
             m.Show();
         }
 
-        public void newElements()
+        public void Elements()
         {
             ActiveMdiChild.Hide();
             ne.Show();

@@ -37,41 +37,22 @@ namespace WindowsFormsApplicationProjectX
             
         }
 
-        //public void newTable()
-        //{
-        //    ActiveMdiChild.Hide();
-        //    nt.Show();
-        //}
-
-        //public void mainView()
-        //{
-        //    ActiveMdiChild.Hide();
-        //    m.Show();
-        //}
-
-        //public void newElements()
-        //{
-        //    ActiveMdiChild.Hide();
-        //    ne.Show();
-        //}
-        public void getMDI(Form mdi)
+        public void newTable()
         {
             ActiveMdiChild.Hide();
+            nt.Show();
+        }
 
-            if (mdi.GetType() == ne.GetType())
-            {
-                ne.Show();
-            }
+        public void mainView()
+        {
+            ActiveMdiChild.Hide();
+            m.Show();
+        }
 
-            if(mdi.GetType() == nt.GetType())
-            {
-                nt.Show();
-            }
-
-            if(mdi.GetType() == m.GetType())
-            {
-                m.Show();
-            }
+        public void newElements()
+        {
+            ActiveMdiChild.Hide();
+            ne.Show();
         }
 
     }

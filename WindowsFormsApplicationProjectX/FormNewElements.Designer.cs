@@ -41,7 +41,6 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "FormNewElements";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

@@ -20,7 +20,7 @@ namespace WindowsFormsApplicationProjectX
         {
             //Initializierung
             InitializeComponent();
-
+            
             m = new FormMainView(this);
             nt = new FormNewTable(this);
             ne = new FormNewElements(this);
@@ -32,26 +32,46 @@ namespace WindowsFormsApplicationProjectX
             m.Dock = DockStyle.Fill;
             nt.Dock = DockStyle.Fill;
             ne.Dock = DockStyle.Fill;
-
+            
             m.Show();
+            
         }
 
-        public void newTable()
-        {
-            ActiveMdiChild.Hide();
-            nt.Show();
-        }
+        //public void newTable()
+        //{
+        //    ActiveMdiChild.Hide();
+        //    nt.Show();
+        //}
 
-        public void mainView()
-        {
-            ActiveMdiChild.Hide();
-            m.Show();
-        }
+        //public void mainView()
+        //{
+        //    ActiveMdiChild.Hide();
+        //    m.Show();
+        //}
 
-        public void newElements()
+        //public void newElements()
+        //{
+        //    ActiveMdiChild.Hide();
+        //    ne.Show();
+        //}
+        public void getMDI(Form mdi)
         {
             ActiveMdiChild.Hide();
-            ne.Show();
+
+            if (mdi.GetType() == ne.GetType())
+            {
+                ne.Show();
+            }
+
+            if(mdi.GetType() == nt.GetType())
+            {
+                nt.Show();
+            }
+
+            if(mdi.GetType() == m.GetType())
+            {
+                m.Show();
+            }
         }
 
     }

@@ -18,5 +18,15 @@ namespace WindowsFormsApplicationProjectX
             InitializeComponent();
             m = f;
         }
+
+        private void pictureBoxBack_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxTabellenname_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

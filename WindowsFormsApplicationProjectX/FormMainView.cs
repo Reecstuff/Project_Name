@@ -23,5 +23,39 @@ namespace WindowsFormsApplicationProjectX
         {
             m.newTable();
         }
+
+        private void richTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(richTextBox.Focused)
+            {
+                if (e.KeyCode == Keys.Down)
+                {
+                    listBox.SetSelected(0, true);
+                }
+            }
+        }
+
+        private void listBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (listBox.Focused)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Down:
+                        listBox.SetSelected(1, true);
+                        break;
+                    case Keys.Up:
+                        if (listBox.Items.Count == listBox.TopIndex)
+                        {
+                            richTextBox.Select();
+                        }
+                        else
+                        {
+                            listBox.SetSelected(0, true);
+                        }
+                        break;
+                }
+            }
+        }
     }
 }

@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNewTable));
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.textBoxTabellenname = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelSpalte1 = new System.Windows.Forms.Label();
+            this.labelSpalte5 = new System.Windows.Forms.Label();
+            this.labelSpalte4 = new System.Windows.Forms.Label();
+            this.labelSpalte3 = new System.Windows.Forms.Label();
+            this.labelSpalte2 = new System.Windows.Forms.Label();
             this.textBoxSpalte1 = new System.Windows.Forms.TextBox();
             this.textBoxSpalte5 = new System.Windows.Forms.TextBox();
             this.textBoxSpalte4 = new System.Windows.Forms.TextBox();
@@ -76,64 +76,64 @@
             this.textBoxTabellenname.Size = new System.Drawing.Size(100, 20);
             this.textBoxTabellenname.TabIndex = 1;
             // 
-            // label1
+            // labelName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tabellenname:";
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(115, 102);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(77, 13);
+            this.labelName.TabIndex = 2;
+            this.labelName.Text = "Tabellenname:";
             // 
-            // label2
+            // labelSpalte1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(115, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Spalte 1:";
-            this.label2.Visible = false;
+            this.labelSpalte1.AutoSize = true;
+            this.labelSpalte1.Location = new System.Drawing.Point(115, 138);
+            this.labelSpalte1.Name = "labelSpalte1";
+            this.labelSpalte1.Size = new System.Drawing.Size(49, 13);
+            this.labelSpalte1.TabIndex = 3;
+            this.labelSpalte1.Text = "Spalte 1:";
+            this.labelSpalte1.Visible = false;
             // 
-            // label3
+            // labelSpalte5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(115, 249);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Spalte 5:";
-            this.label3.Visible = false;
+            this.labelSpalte5.AutoSize = true;
+            this.labelSpalte5.Location = new System.Drawing.Point(115, 249);
+            this.labelSpalte5.Name = "labelSpalte5";
+            this.labelSpalte5.Size = new System.Drawing.Size(49, 13);
+            this.labelSpalte5.TabIndex = 4;
+            this.labelSpalte5.Text = "Spalte 5:";
+            this.labelSpalte5.Visible = false;
             // 
-            // label4
+            // labelSpalte4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(115, 219);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Spalte 4:";
-            this.label4.Visible = false;
+            this.labelSpalte4.AutoSize = true;
+            this.labelSpalte4.Location = new System.Drawing.Point(115, 219);
+            this.labelSpalte4.Name = "labelSpalte4";
+            this.labelSpalte4.Size = new System.Drawing.Size(49, 13);
+            this.labelSpalte4.TabIndex = 5;
+            this.labelSpalte4.Text = "Spalte 4:";
+            this.labelSpalte4.Visible = false;
             // 
-            // label5
+            // labelSpalte3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(115, 191);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Spalte 3:";
-            this.label5.Visible = false;
+            this.labelSpalte3.AutoSize = true;
+            this.labelSpalte3.Location = new System.Drawing.Point(115, 191);
+            this.labelSpalte3.Name = "labelSpalte3";
+            this.labelSpalte3.Size = new System.Drawing.Size(49, 13);
+            this.labelSpalte3.TabIndex = 6;
+            this.labelSpalte3.Text = "Spalte 3:";
+            this.labelSpalte3.Visible = false;
             // 
-            // label6
+            // labelSpalte2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(115, 164);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Spalte 2:";
-            this.label6.Visible = false;
+            this.labelSpalte2.AutoSize = true;
+            this.labelSpalte2.Location = new System.Drawing.Point(115, 164);
+            this.labelSpalte2.Name = "labelSpalte2";
+            this.labelSpalte2.Size = new System.Drawing.Size(49, 13);
+            this.labelSpalte2.TabIndex = 7;
+            this.labelSpalte2.Text = "Spalte 2:";
+            this.labelSpalte2.Visible = false;
             // 
             // textBoxSpalte1
             // 
@@ -184,6 +184,7 @@
             this.buttonTabelleErstellen.Text = "Tabelle erstellen";
             this.buttonTabelleErstellen.UseVisualStyleBackColor = true;
             this.buttonTabelleErstellen.Visible = false;
+            this.buttonTabelleErstellen.Click += new System.EventHandler(this.buttonTabelleErstellen_Click);
             // 
             // pictureBoxTabellenname
             // 
@@ -206,6 +207,7 @@
             this.pictureBoxSpalte1.TabIndex = 15;
             this.pictureBoxSpalte1.TabStop = false;
             this.pictureBoxSpalte1.Visible = false;
+            this.pictureBoxSpalte1.Click += new System.EventHandler(this.pictureBoxSpalte1_Click);
             // 
             // pictureBoxSpalte2
             // 
@@ -217,6 +219,7 @@
             this.pictureBoxSpalte2.TabIndex = 16;
             this.pictureBoxSpalte2.TabStop = false;
             this.pictureBoxSpalte2.Visible = false;
+            this.pictureBoxSpalte2.Click += new System.EventHandler(this.pictureBoxSpalte2_Click);
             // 
             // pictureBoxSpalte3
             // 
@@ -228,6 +231,7 @@
             this.pictureBoxSpalte3.TabIndex = 17;
             this.pictureBoxSpalte3.TabStop = false;
             this.pictureBoxSpalte3.Visible = false;
+            this.pictureBoxSpalte3.Click += new System.EventHandler(this.pictureBoxSpalte3_Click);
             // 
             // pictureBoxSpalte5
             // 
@@ -239,6 +243,7 @@
             this.pictureBoxSpalte5.TabIndex = 18;
             this.pictureBoxSpalte5.TabStop = false;
             this.pictureBoxSpalte5.Visible = false;
+            this.pictureBoxSpalte5.Click += new System.EventHandler(this.pictureBoxSpalte5_Click);
             // 
             // pictureBoxSpalte4
             // 
@@ -250,6 +255,7 @@
             this.pictureBoxSpalte4.TabIndex = 19;
             this.pictureBoxSpalte4.TabStop = false;
             this.pictureBoxSpalte4.Visible = false;
+            this.pictureBoxSpalte4.Click += new System.EventHandler(this.pictureBoxSpalte4_Click);
             // 
             // FormNewTable
             // 
@@ -269,12 +275,12 @@
             this.Controls.Add(this.textBoxSpalte4);
             this.Controls.Add(this.textBoxSpalte5);
             this.Controls.Add(this.textBoxSpalte1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelSpalte2);
+            this.Controls.Add(this.labelSpalte3);
+            this.Controls.Add(this.labelSpalte4);
+            this.Controls.Add(this.labelSpalte5);
+            this.Controls.Add(this.labelSpalte1);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.textBoxTabellenname);
             this.Controls.Add(this.pictureBoxBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -302,12 +308,12 @@
 
         private System.Windows.Forms.PictureBox pictureBoxBack;
         private System.Windows.Forms.TextBox textBoxTabellenname;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelSpalte1;
+        private System.Windows.Forms.Label labelSpalte5;
+        private System.Windows.Forms.Label labelSpalte4;
+        private System.Windows.Forms.Label labelSpalte3;
+        private System.Windows.Forms.Label labelSpalte2;
         private System.Windows.Forms.TextBox textBoxSpalte1;
         private System.Windows.Forms.TextBox textBoxSpalte5;
         private System.Windows.Forms.TextBox textBoxSpalte4;

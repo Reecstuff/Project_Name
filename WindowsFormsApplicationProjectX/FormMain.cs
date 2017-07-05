@@ -16,11 +16,13 @@ namespace WindowsFormsApplicationProjectX
         FormMainView m;
         FormNewTable nt;
         FormElements ne;
+        Connection con;
         public FormMain()
         {
             //Initializierung
             InitializeComponent();
-            
+
+            con = new Connection();
             m = new FormMainView(this);
             nt = new FormNewTable(this);
             ne = new FormElements(this);
@@ -34,7 +36,6 @@ namespace WindowsFormsApplicationProjectX
             ne.Dock = DockStyle.Fill;
             
             m.Show();
-            
         }
 
         public void newTable()
@@ -47,13 +48,19 @@ namespace WindowsFormsApplicationProjectX
         {
             ActiveMdiChild.Hide();
             m.Show();
+            m.refreshSearch();
         }
 
-        public void Elements()
+        public void Elements(string table)
         {
             ActiveMdiChild.Hide();
             ne.Show();
+            ne.loadingView(con.fillDataGridView(table));
         }
 
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            con.close();
+        }
     }
 }

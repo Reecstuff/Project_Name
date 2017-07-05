@@ -16,7 +16,12 @@ namespace WindowsFormsApplicationProjectX
         public FormElements(FormMain f)
         {
             InitializeComponent();
-            m = f;
+            m = f;       
+        }
+
+        public void loadingView(DataSet ds)
+        {
+            dataGridView.DataSource = ds;
         }
     }
 }

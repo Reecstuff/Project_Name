@@ -18,8 +18,7 @@ namespace WindowsFormsApplicationProjectX
         //DataSet ds;
         
         public Search()
-        {
-            connect = new Connection();
+        {         
             source = new AutoCompleteStringCollection();
             // adapter = new OleDbDataAdapter("SELECT name FROM sys.Tables", connect.Con);
             //ds = new DataSet();          
@@ -28,6 +27,8 @@ namespace WindowsFormsApplicationProjectX
         public AutoCompleteStringCollection fillSource()
         {
             //adapter.Fill(ds, "sys.Tables");
+            //connect = new Connection();
+            source.Clear();
             OleDbCommand cmd = new OleDbCommand("SELECT name FROM sys.Tables", connect.Con);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -35,6 +36,7 @@ namespace WindowsFormsApplicationProjectX
                 source.Add(reader["name"].ToString());
             }
 
+            connect.close();
             return source;
                 
            

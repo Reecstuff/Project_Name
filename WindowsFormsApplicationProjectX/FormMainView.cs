@@ -18,14 +18,32 @@ namespace WindowsFormsApplicationProjectX
         {
             InitializeComponent();
             m = fm;
-            s = new Search();
-            textBoxSearch.AutoCompleteCustomSource = s.fillSource();
-            
+            s = new Search();           
         }
 
         private void labelNewTable_Click(object sender, EventArgs e)
         {
             m.newTable();
+        }
+
+        public void refreshSearch()
+        {
+            textBoxSearch.AutoCompleteCustomSource = s.fillSource();
+        }
+
+        private void textBoxSearch_Enter(object sender, EventArgs e)
+        {
+            searchComplete();
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            searchComplete();
+        }
+
+        private void searchComplete()
+        {
+            m.Elements(textBoxSearch.Text.ToString());
         }
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.labelNewTable = new System.Windows.Forms.Label();
-            this.listBox = new System.Windows.Forms.ListBox();
-            this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelNewTable
@@ -44,40 +44,35 @@
             this.labelNewTable.Text = "Neue Tabelle";
             this.labelNewTable.Click += new System.EventHandler(this.labelNewTable_Click);
             // 
-            // listBox
+            // textBoxSearch
             // 
-            this.listBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox.FormattingEnabled = true;
-            this.listBox.ItemHeight = 31;
-            this.listBox.Items.AddRange(new object[] {
-            "Test",
-            "Test"});
-            this.listBox.Location = new System.Drawing.Point(382, 284);
-            this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(470, 31);
-            this.listBox.TabIndex = 1;
-            this.listBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox_KeyDown);
+            this.textBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.Location = new System.Drawing.Point(363, 259);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(515, 45);
+            this.textBoxSearch.TabIndex = 3;
             // 
-            // richTextBox
+            // label1
             // 
-            this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox.Location = new System.Drawing.Point(382, 255);
-            this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(470, 32);
-            this.richTextBox.TabIndex = 2;
-            this.richTextBox.Text = "";
-            this.richTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox_KeyDown);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 54F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(487, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(268, 82);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Goggle";
             // 
             // FormMainView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1318, 631);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelNewTable);
-            this.Controls.Add(this.listBox);
-            this.Controls.Add(this.richTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -94,7 +89,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelNewTable;
-        private System.Windows.Forms.ListBox listBox;
-        private System.Windows.Forms.RichTextBox richTextBox;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -7,9 +7,10 @@ using System.Data.OleDb;
 
 namespace WindowsFormsApplicationProjectX
 {
-    class Connection
+    public class Connection
     {
         OleDbConnection con;
+
         public Connection()
         {
             connect();
@@ -20,6 +21,24 @@ namespace WindowsFormsApplicationProjectX
             con = new OleDbConnection();
             con.ConnectionString = Properties.Settings.Default.DbPath;
             con.Open();
+        }
+
+        public void close()
+        {
+            con.Close();
+        }
+
+        public OleDbConnection Con
+        {
+            get
+            {
+                return con;
+            }
+
+            set
+            {
+                con = value;
+            }
         }
     }
 }

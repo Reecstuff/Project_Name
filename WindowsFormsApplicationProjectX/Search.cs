@@ -14,13 +14,14 @@ namespace WindowsFormsApplicationProjectX
     {
         AutoCompleteStringCollection source;
         Connection connect;
-        OleDbCommand cmd;
+        
        // OleDbDataAdapter adapter;
         //DataSet ds;
         
         public Search()
         {         
             source = new AutoCompleteStringCollection();
+            connect = Connection.getConnection();
             // adapter = new OleDbDataAdapter("SELECT name FROM sys.Tables", connect.Con);
             //ds = new DataSet();          
         }
@@ -29,7 +30,9 @@ namespace WindowsFormsApplicationProjectX
         {
             //adapter.Fill(ds, "sys.Tables");
             //connect = new Connection();
-            source.Clear();
+            //source.Clear();
+            OleDbCommand cmd;
+
             cmd = connect.Con.CreateCommand();
             cmd.CommandText = "SELECT name FROM sys.Tables";
             cmd.CommandType = CommandType.Text;
@@ -38,9 +41,10 @@ namespace WindowsFormsApplicationProjectX
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                source.Add(reader["name"].ToString());
+                //source.Add(reader["name"].ToString());
+                source.Add(reader[2].ToString());
             }
-
+            //cmd.Dispose();
             //connect.close();
             return source;
                 

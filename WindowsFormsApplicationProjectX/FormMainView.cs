@@ -31,11 +31,6 @@ namespace WindowsFormsApplicationProjectX
             textBoxSearch.AutoCompleteCustomSource = s.fillSource();
         }
 
-        private void textBoxSearch_Enter(object sender, EventArgs e)
-        {
-            searchComplete();
-        }
-
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             searchComplete();

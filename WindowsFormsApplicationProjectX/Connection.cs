@@ -70,5 +70,21 @@ namespace WindowsFormsApplicationProjectX
             }
             return instance;
         }
+
+        public void updateDatabase(string s, string [] columnNames)
+        {
+            OleDbCommand cm = con.CreateCommand();
+
+            cm.CommandText = s;
+
+            for(int i = 1; i <= columnNames.Length; i++)
+            {
+                cm.Parameters.AddWithValue(i.ToString(), columnNames[i - 1]);
+            }
+
+            cm.CommandType = CommandType.Text;
+            cm.ExecuteNonQuery();
+            
+        }
     }
 }

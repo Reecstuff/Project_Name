@@ -63,5 +63,10 @@ namespace WindowsFormsApplicationProjectX
         {
             con.close();
         }
+
+        public void updateDatabase(string s, string [] columnNames)
+        {
+            con.updateDatabase(s, columnNames);
+        }
     }
 }

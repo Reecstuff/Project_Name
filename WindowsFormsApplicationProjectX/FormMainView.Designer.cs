@@ -47,13 +47,14 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSearch.Location = new System.Drawing.Point(407, 274);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(515, 45);
             this.textBoxSearch.TabIndex = 3;
+            this.textBoxSearch.Enter += new System.EventHandler(this.textBoxSearch_Enter);
             // 
             // label1
             // 

@@ -10,7 +10,6 @@ namespace WindowsFormsApplicationProjectX
 {
     public class Connection
     {
-        static Connection instance = null;
         OleDbConnection con;
         OleDbDataAdapter adapter;
         DataSet ds;
@@ -52,19 +51,13 @@ namespace WindowsFormsApplicationProjectX
         {
             get
             {
-                return this.con;
+                return con;
             }
 
-        }
-
-        public static Connection getConnection()
-        {
-            if(instance == null)
+            set
             {
-                instance = new Connection();
+                con = value;
             }
-            return instance;
         }
-
     }
 }

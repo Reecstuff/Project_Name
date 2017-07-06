@@ -22,13 +22,8 @@ namespace WindowsFormsApplicationProjectX
         public void loadingView(DataSet ds, string table)
         {
             dataGridView.DataSource = ds;
-            dataGridView.DataMember = table;
+            dataGridView.DataMember = "";
             //dataGridView.Columns[0].Visible = false;
-        }
-
-        private void pictureBoxBack_Click(object sender, EventArgs e)
-        {
-            m.mainView();
         }
     }
 }

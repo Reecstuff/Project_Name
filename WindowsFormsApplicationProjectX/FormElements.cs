@@ -23,7 +23,7 @@ namespace WindowsFormsApplicationProjectX
         {
             dataGridView.DataSource = ds;
             dataGridView.DataMember = "";
-            dataGridView.Columns[0].Visible = false;
+            //dataGridView.Columns[0].Visible = false;
         }
     }
 }

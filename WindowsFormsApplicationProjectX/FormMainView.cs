@@ -18,7 +18,8 @@ namespace WindowsFormsApplicationProjectX
         {
             InitializeComponent();
             m = fm;
-            s = new Search();           
+            s = new Search();
+
         }
 
         private void labelNewTable_Click(object sender, EventArgs e)

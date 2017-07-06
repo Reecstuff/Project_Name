@@ -36,6 +36,7 @@ namespace WindowsFormsApplicationProjectX
             ne.Dock = DockStyle.Fill;
             
             m.Show();
+            m.refreshSearch();
         }
 
         public void newTable()

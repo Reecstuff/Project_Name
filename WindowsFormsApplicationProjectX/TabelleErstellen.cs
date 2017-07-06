@@ -100,6 +100,7 @@ namespace WindowsFormsApplicationProjectX
         public TabelleErstellen(String Tabellenname)
         {
             this.Tabellenname = Tabellenname;
+            connect = Connection.getConnection();
         }
 
         public void erstellenTabelle()

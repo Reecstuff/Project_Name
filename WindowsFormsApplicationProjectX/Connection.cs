@@ -22,7 +22,8 @@ namespace WindowsFormsApplicationProjectX
         public void connect()//Connection aufbauen zur Datenbank
         {
             con = new OleDbConnection();
-            con.ConnectionString = Properties.Settings.Default.DbPath;
+            //con.ConnectionString = Properties.Settings.Default.DbPath;
+            con.ConnectionString = Properties.Settings.Default.DbPathChris;
             con.Open();
         }
 

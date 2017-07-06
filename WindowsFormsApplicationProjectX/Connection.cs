@@ -23,7 +23,7 @@ namespace WindowsFormsApplicationProjectX
         {
             con = new OleDbConnection();
             //con.ConnectionString = Properties.Settings.Default.DbPath;
-            con.ConnectionString = Properties.Settings.Default.DbPathChris;
+            con.ConnectionString = Properties.Settings.Default.DbPath;
             con.Open();
         }
 

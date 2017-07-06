@@ -105,12 +105,9 @@ namespace WindowsFormsApplicationProjectX
 
         public void erstellenTabelle()
         {
-
             command = connect.Con.CreateCommand();
-            command.CommandText = erstelleBefehl();
+            command.CommandText = erstelleBefehl();//der SQL-Befehl zum Erstellen der Tabelle
             command.ExecuteNonQuery();
-
-
         }
 
         public String erstelleBefehl()
@@ -137,7 +134,7 @@ namespace WindowsFormsApplicationProjectX
             {
                 s.Append(spalte5 + " VARCHAR(25),");
             }
-            s.Remove(s.Length, 1);
+            s.Remove(s.Length-1, 1);
             s.Append(");");
             
             return s.ToString();

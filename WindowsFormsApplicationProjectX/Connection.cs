@@ -32,11 +32,19 @@ namespace WindowsFormsApplicationProjectX
 
         public DataSet fillDataGridView(string table)//GridView befüllen
         {
-            adapter = new OleDbDataAdapter("SELECT * FROM "+table, Con);
-            ds = new DataSet();
-            adapter.Fill(ds, table);
-            adapter.Dispose();
-            return ds;
+            if (!table.Equals(""))
+            {
+                adapter = new OleDbDataAdapter("SELECT * FROM " + table, Con);
+                ds = new DataSet();
+                adapter.Fill(ds, table);
+                adapter.Dispose();
+                return ds;
+            }
+
+            else
+            {
+                return null;
+            }
         }
 
         public OleDbConnection Con

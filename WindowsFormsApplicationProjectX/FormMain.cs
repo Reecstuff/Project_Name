@@ -55,7 +55,7 @@ namespace WindowsFormsApplicationProjectX
         {
             ActiveMdiChild.Hide();
             ne.Show();
-            ne.loadingView(con.fillDataGridView(table));
+            ne.loadingView(con.fillDataGridView(table),table);
         }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)

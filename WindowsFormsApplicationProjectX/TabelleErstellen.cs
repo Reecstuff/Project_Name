@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,9 @@ namespace WindowsFormsApplicationProjectX
         private String spalte3 = null;
         private String spalte4 = null;
         private String spalte5 = null;
+        Connection connect;
+        OleDbCommand command = new OleDbCommand();
+
 
         public string Tabellenname
         {
@@ -96,6 +100,46 @@ namespace WindowsFormsApplicationProjectX
         public TabelleErstellen(String Tabellenname)
         {
             this.Tabellenname = Tabellenname;
+        }
+
+        public void erstellenTabelle()
+        {
+
+            command = connect.Con.CreateCommand();
+            command.CommandText = erstelleBefehl();
+            command.ExecuteNonQuery();
+
+
+        }
+
+        public String erstelleBefehl()
+        {
+            StringBuilder s = new StringBuilder();
+            s.Append("CREATE TABLE " + tabellenname + " (");
+            if(spalte1 != null)
+            {
+                s.Append(spalte1 + " VARCHAR(25),");
+            }
+            if (spalte2 != null)
+            {
+                s.Append(spalte2 + " VARCHAR(25),");
+            }
+            if (spalte3 != null)
+            {
+                s.Append(spalte3 + " VARCHAR(25),");
+            }
+            if (spalte4 != null)
+            {
+                s.Append(spalte4 + " VARCHAR(25),");
+            }
+            if (spalte5 != null)
+            {
+                s.Append(spalte5 + " VARCHAR(25),");
+            }
+            s.Remove(s.Length, 1);
+            s.Append(");");
+            
+            return s.ToString();
         }
     }
 }

@@ -17,7 +17,8 @@ namespace WindowsFormsApplicationProjectX
         public FormElements(FormMain f)
         {
             InitializeComponent();
-            m = f;       
+            m = f;
+            table = null;
         }
 
         public void loadingView(DataSet ds, string t)
@@ -35,42 +36,42 @@ namespace WindowsFormsApplicationProjectX
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             m.mainView();
-        }
-
-        private void buttonUpdate_Click(object sender, EventArgs e)
-        {
             update();
         }
 
         private void update()
         {
-            StringBuilder s = new StringBuilder();
-            StringBuilder b = new StringBuilder();
-            string [] columnNames = null;
-            int i = 0;
-            s.Append("INSERT into " + table + "(");
-            b.Append(") VALUES (");
-            
-            for(i = 1; dataGridView.ColumnCount >= i; i++)
-            {
-                if(i == dataGridView.ColumnCount)
-                {
-                    s.Append(dataGridView.Columns[i].Name);
-                    b.Append(i.ToString() + ")");
-                }
+            //StringBuilder s = new StringBuilder();
+            //StringBuilder b = new StringBuilder();
+            //string [] columnNames = new string[dataGridView.ColumnCount+1];
+            //string[] values = new string[dataGridView.ColumnCount + 1];
+            //int i = 0;
+            //s.Append("INSERT into " + table + "(");
+            //b.Append(") VALUES (");
 
-                else
-                {
-                    s.Append(dataGridView.Columns[i].Name + ", ");
-                    b.Append(i.ToString() + ", ");
-                }
+            //for(i = 1; dataGridView.ColumnCount > i; i++)
+            //{
+            //    if(i == dataGridView.ColumnCount-1)
+            //    {
+            //        s.Append(dataGridView.Columns[i].Name);
+            //        b.Append(i.ToString() + ")");
+            //    }
 
-                columnNames[i - 1] = dataGridView.Columns[i].Name;
-            }
+            //    else
+            //    {
+            //        s.Append(dataGridView.Columns[i].Name + ", ");
+            //        b.Append(i.ToString() + ", ");
+            //    }
 
-            s.Append(b.ToString());
+            //    columnNames[i - 1] = dataGridView.Columns[i].Name;
+            //    values = dataGridView.
+            //}
 
-            m.updateDatabase(s.ToString(), columnNames);
+            //s.Append(b.ToString());
+
+            //m.updateDatabase(s.ToString(), columnNames);
+
+            m.updateDatabase(table);
         }
     }
 }

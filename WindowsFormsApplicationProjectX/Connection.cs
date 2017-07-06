@@ -39,7 +39,7 @@ namespace WindowsFormsApplicationProjectX
                 adapter = new OleDbDataAdapter("SELECT * FROM " + table, Con);
                 ds = new DataSet();
                 adapter.Fill(ds, table);
-                adapter.Dispose();
+                //adapter.Dispose();
                 return ds;
             }
 
@@ -71,20 +71,28 @@ namespace WindowsFormsApplicationProjectX
             return instance;
         }
 
-        public void updateDatabase(string s, string [] columnNames)
+        public void updateDatabase(string table/*, string [] columnNames*/)
         {
-            OleDbCommand cm = con.CreateCommand();
+            //OleDbCommand cm = con.CreateCommand();
 
-            cm.CommandText = s;
+            //cm.CommandText = s;
 
-            for(int i = 1; i <= columnNames.Length; i++)
-            {
-                cm.Parameters.AddWithValue(i.ToString(), columnNames[i - 1]);
-            }
+            //for(int i = 1; i <= columnNames.Length; i++)
+            //{
+            //    cm.Parameters.AddWithValue(i.ToString(), columnNames[i - 1]);
+            //}
 
-            cm.CommandType = CommandType.Text;
-            cm.ExecuteNonQuery();
-            
+            //cm.CommandType = CommandType.Text;
+            //cm.ExecuteNonQuery();
+            //adapter = new OleDbDataAdapter("SELECT * FROM " + table, Con);
+
+            OleDbCommandBuilder cmdBld = new OleDbCommandBuilder(adapter);
+            adapter.DeleteCommand = cmdBld.GetDeleteCommand();
+            adapter.InsertCommand = cmdBld.GetInsertCommand();
+            adapter.UpdateCommand = cmdBld.GetUpdateCommand();
+
+            adapter.Update(ds.Tables[table]);
+         
         }
     }
 }

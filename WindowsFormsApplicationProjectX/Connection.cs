@@ -69,15 +69,29 @@ namespace WindowsFormsApplicationProjectX
             return instance;
         }
 
-        public void updateDatabase(string table)
+        public void updateDatabase(string table)//Datenbank wird mit veränderten Daten aktualisiert
         {
-
+            
             OleDbCommandBuilder cmdBld = new OleDbCommandBuilder(adapter);
-            adapter.DeleteCommand = cmdBld.GetDeleteCommand();
-            adapter.InsertCommand = cmdBld.GetInsertCommand();
-            adapter.UpdateCommand = cmdBld.GetUpdateCommand();
-            adapter.Update(ds.Tables[table]);
+            try
+            {
+                adapter.DeleteCommand = cmdBld.GetDeleteCommand();
+                adapter.InsertCommand = cmdBld.GetInsertCommand();
+                adapter.UpdateCommand = cmdBld.GetUpdateCommand();
+                adapter.Update(ds.Tables[table]);
+            }
+            catch(InvalidOperationException e)
+            {
+                insertDataBase(table);
+            }
          
+        }
+
+        public void insertDataBase(string table)//Datenbank wird mit neuen Daten aus einer neu erstellten Tabelle gefüllt
+        {
+            OleDbCommandBuilder cmdBld = new OleDbCommandBuilder(adapter);
+            adapter.InsertCommand = cmdBld.GetInsertCommand();
+            adapter.Update(ds.Tables[table]);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace WindowsFormsApplicationProjectX
             m.MdiParent = this;
             nt.MdiParent = this;
             ne.MdiParent = this;
-
+            //Zum ausfüllen des Parentobjekts
             m.Dock = DockStyle.Fill;
             nt.Dock = DockStyle.Fill;
             ne.Dock = DockStyle.Fill;
@@ -67,6 +67,12 @@ namespace WindowsFormsApplicationProjectX
         public void updateDatabase(string s)
         {
             con.updateDatabase(s);
+        }
+
+        public void refreshDatabase()
+        {
+            con.close();
+            con.connect();
         }
     }
 }

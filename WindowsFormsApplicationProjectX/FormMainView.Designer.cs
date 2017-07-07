@@ -38,7 +38,7 @@
             // 
             this.labelNewTable.AutoSize = true;
             this.labelNewTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNewTable.Location = new System.Drawing.Point(348, 276);
+            this.labelNewTable.Location = new System.Drawing.Point(238, 256);
             this.labelNewTable.Name = "labelNewTable";
             this.labelNewTable.Size = new System.Drawing.Size(221, 39);
             this.labelNewTable.TabIndex = 0;
@@ -50,7 +50,7 @@
             this.textBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(692, 466);
+            this.textBoxSearch.Location = new System.Drawing.Point(582, 446);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(515, 45);
             this.textBoxSearch.TabIndex = 3;
@@ -61,7 +61,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 54F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(815, 359);
+            this.label1.Location = new System.Drawing.Point(705, 339);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(268, 82);
             this.label1.TabIndex = 4;
@@ -74,7 +74,7 @@
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearch.ForeColor = System.Drawing.Color.Snow;
-            this.buttonSearch.Location = new System.Drawing.Point(883, 517);
+            this.buttonSearch.Location = new System.Drawing.Point(773, 497);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(133, 46);
             this.buttonSearch.TabIndex = 5;
@@ -85,7 +85,7 @@
             // FormMainView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1823, 871);
+            this.ClientSize = new System.Drawing.Size(1684, 871);
             this.ControlBox = false;
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label1);

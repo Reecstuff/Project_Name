@@ -100,23 +100,23 @@ namespace WindowsFormsApplicationProjectX
         public TabelleErstellen(String Tabellenname)
         {
             this.Tabellenname = Tabellenname;
-            connect = Connection.getConnection();
+            connect = Connection.getConnection();//Die Instanz der Connection wird dem Connect-Objekt übergeben
         }
 
         public void erstellenTabelle()
         {
-            command = connect.Con.CreateCommand();
-            command.CommandText = erstelleBefehl();//der SQL-Befehl zum Erstellen der Tabelle
+            command = connect.Con.CreateCommand();//Der Command wird erstellt
+            command.CommandText = erstelleBefehl();//Der SQL-Befehl zum Erstellen der Tabelle
             command.ExecuteNonQuery();
         }
 
         public String erstelleBefehl()
         {
             StringBuilder s = new StringBuilder();
-            s.Append("CREATE TABLE " + tabellenname + " (");
+            s.Append("CREATE TABLE " + tabellenname + " (f_autowert COUNTER, ");
             if(spalte1 != null)
             {
-                s.Append(spalte1 + " VARCHAR(25),");
+                s.Append(spalte1 + " VARCHAR(25),");//Die Spalte wird dem Befehl hinzugefügt
             }
             if (spalte2 != null)
             {
@@ -134,7 +134,7 @@ namespace WindowsFormsApplicationProjectX
             {
                 s.Append(spalte5 + " VARCHAR(25),");
             }
-            s.Remove(s.Length-1, 1);
+            s.Remove(s.Length-1, 1);//das "," am Ende des Befehls wird gelöscht
             s.Append(");");
             
             return s.ToString();

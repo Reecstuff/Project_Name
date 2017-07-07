@@ -21,7 +21,7 @@ namespace WindowsFormsApplicationProjectX
             table = null;
         }
 
-        public void loadingView(DataSet ds, string t)
+        public void loadingView(DataSet ds, string t)//DataGridView wird mit der Tabelle geladen
         {
             this.table = t;
             dataGridView.DataSource = null;
@@ -42,6 +42,38 @@ namespace WindowsFormsApplicationProjectX
         private void update()
         {         
             m.updateDatabase(table);
+        }
+
+        private void DataError(object sender, DataGridViewDataErrorEventArgs anError)
+        {
+
+            if (anError.Context == DataGridViewDataErrorContexts.Commit)
+            {
+                MessageBox.Show("Fremdschlüssel ist nicht existent");
+            }
+            if (anError.Context == DataGridViewDataErrorContexts.CurrentCellChange)
+            {
+                MessageBox.Show("Cell change");
+            }
+            if (anError.Context == DataGridViewDataErrorContexts.Parsing)
+            {
+                MessageBox.Show("parsing error");
+            }
+            if (anError.Context == DataGridViewDataErrorContexts.LeaveControl)
+            {
+                MessageBox.Show("leave control error");
+            }
+
+            if ((anError.Exception) is ConstraintException)
+            {
+                DataGridView view = (DataGridView)sender;
+                view.Rows[anError.RowIndex].ErrorText = "an error";
+                view.Rows[anError.RowIndex].Cells[anError.ColumnIndex].ErrorText = "an error";
+
+                anError.ThrowException = false;
+            }
+
+
         }
     }
 }

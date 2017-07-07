@@ -32,7 +32,7 @@ namespace WindowsFormsApplicationProjectX
                 labelSpalte1.Visible = true;
                 textBoxSpalte1.Visible = true;
                 pictureBoxSpalte1.Visible = true;
-                te = new TabelleErstellen(textBoxTabellenname.Text);
+                te = new TabelleErstellen(textBoxTabellenname.Text);//Das TabelleErstellen Objekt wird erstellt
             }
             
         }
@@ -92,8 +92,9 @@ namespace WindowsFormsApplicationProjectX
 
         private void buttonTabelleErstellen_Click(object sender, EventArgs e)
         {
-            te.erstellenTabelle();//die Tabelle wird erstellt und in der Datenbank gespeichert
-            m.Elements(te.Tabellenname);
+            te.erstellenTabelle();//Die Tabelle wird erstellt und in der Datenbank gespeichert
+            m.refreshDatabase();//Datenbank wird geschlossen und anschließend wieder geöffnet
+            m.Elements(te.Tabellenname);//Daten werden angezeigt
         }
     }
 }

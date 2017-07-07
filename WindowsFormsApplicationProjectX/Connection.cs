@@ -22,7 +22,6 @@ namespace WindowsFormsApplicationProjectX
         public void connect()//Connection aufbauen zur Datenbank
         {
             con = new OleDbConnection();
-            //con.ConnectionString = Properties.Settings.Default.DbPath;
             con.ConnectionString = Properties.Settings.Default.DbPath;
             con.Open();
         }
@@ -39,7 +38,6 @@ namespace WindowsFormsApplicationProjectX
                 adapter = new OleDbDataAdapter("SELECT * FROM " + table, Con);
                 ds = new DataSet();
                 adapter.Fill(ds, table);
-                //adapter.Dispose();
                 return ds;
             }
 
@@ -71,26 +69,13 @@ namespace WindowsFormsApplicationProjectX
             return instance;
         }
 
-        public void updateDatabase(string table/*, string [] columnNames*/)
+        public void updateDatabase(string table)
         {
-            //OleDbCommand cm = con.CreateCommand();
-
-            //cm.CommandText = s;
-
-            //for(int i = 1; i <= columnNames.Length; i++)
-            //{
-            //    cm.Parameters.AddWithValue(i.ToString(), columnNames[i - 1]);
-            //}
-
-            //cm.CommandType = CommandType.Text;
-            //cm.ExecuteNonQuery();
-            //adapter = new OleDbDataAdapter("SELECT * FROM " + table, Con);
 
             OleDbCommandBuilder cmdBld = new OleDbCommandBuilder(adapter);
             adapter.DeleteCommand = cmdBld.GetDeleteCommand();
             adapter.InsertCommand = cmdBld.GetInsertCommand();
             adapter.UpdateCommand = cmdBld.GetUpdateCommand();
-
             adapter.Update(ds.Tables[table]);
          
         }

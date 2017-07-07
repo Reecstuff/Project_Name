@@ -40,37 +40,7 @@ namespace WindowsFormsApplicationProjectX
         }
 
         private void update()
-        {
-            //StringBuilder s = new StringBuilder();
-            //StringBuilder b = new StringBuilder();
-            //string [] columnNames = new string[dataGridView.ColumnCount+1];
-            //string[] values = new string[dataGridView.ColumnCount + 1];
-            //int i = 0;
-            //s.Append("INSERT into " + table + "(");
-            //b.Append(") VALUES (");
-
-            //for(i = 1; dataGridView.ColumnCount > i; i++)
-            //{
-            //    if(i == dataGridView.ColumnCount-1)
-            //    {
-            //        s.Append(dataGridView.Columns[i].Name);
-            //        b.Append(i.ToString() + ")");
-            //    }
-
-            //    else
-            //    {
-            //        s.Append(dataGridView.Columns[i].Name + ", ");
-            //        b.Append(i.ToString() + ", ");
-            //    }
-
-            //    columnNames[i - 1] = dataGridView.Columns[i].Name;
-            //    values = dataGridView.
-            //}
-
-            //s.Append(b.ToString());
-
-            //m.updateDatabase(s.ToString(), columnNames);
-
+        {         
             m.updateDatabase(table);
         }
     }
